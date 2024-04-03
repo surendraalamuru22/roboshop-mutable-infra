@@ -1,3 +1,3 @@
 module "vpc" {
-  source = ""
+  source = "github.com/surendraalamuru22/tf-module-vpc"
 }
