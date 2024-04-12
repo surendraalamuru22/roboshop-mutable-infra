@@ -23,5 +23,5 @@ vpc = {
 }
 
 management_vpc = {
-  vpc = "vpc-0b36b10ede3747251"
+  vpc_id = "vpc-0b36b10ede3747251"
 }
