@@ -21,3 +21,7 @@ vpc = {
     subnet_availability_zones = ["us-east-1a", "us-east-1b"]
   }
 }
+
+management_vpc = {
+  vpc = "vpc-0b36b10ede3747251"
+}
