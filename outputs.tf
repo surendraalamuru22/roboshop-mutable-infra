@@ -1,3 +1,3 @@
-output "subnets" {
-  value = module.vpc.id
-}
+#output "subnets" {
+#  value = module.vpc.id
+#}
