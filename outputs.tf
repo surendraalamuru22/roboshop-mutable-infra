@@ -1,6 +1,6 @@
-output "subnets" {
-  value = module.vpc.subnets
-}
+#output "subnets" {
+#  value = module.vpc.public_subnets
+#}
 
 #output "vpc" {
 #  value = module.vpc.vpc
