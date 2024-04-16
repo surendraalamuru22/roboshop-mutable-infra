@@ -24,4 +24,5 @@ vpc = {
 
 management_vpc = {
   vpc_id = "vpc-0b36b10ede3747251"
+  cidr_block = "172.31.0.0/16"
 }
