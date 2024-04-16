@@ -36,4 +36,4 @@ management_vpc = {
   vpc_id = "vpc-0b36b10ede3747251"
   cidr_block = "172.31.0.0/16"
   route_table_id = "rtb-016d42e541c5424bc"
-}4
+}
