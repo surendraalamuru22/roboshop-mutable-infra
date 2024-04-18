@@ -1,3 +1,7 @@
 vpc:
   source:  "https://github.com/surendraalamuru22/tf-module-vpc"
   version: "main"
+
+docdb:
+  source:  "https://github.com/surendraalamuru22/tf-module-docdb"
+  version: "main"

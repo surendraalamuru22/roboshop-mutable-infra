@@ -37,3 +37,9 @@ management_vpc = {
   cidr_block = "172.31.0.0/16"
   route_table_id = "rtb-016d42e541c5424bc"
 }
+
+docdb = {
+  db1 = {
+    
+  }
+}
