@@ -5,3 +5,4 @@ variable "rds" {}
 variable "docdb" {}
 variable "elasticache" {}
 variable "rabbitmq" {}
+variable "apps" {}

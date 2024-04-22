@@ -53,3 +53,14 @@ module "rabbitmq" {
   name            = each.key
   instance_type   = each.value.instance_type
 }
+
+module "apps" {
+  source        = "./vendor/modules/app-setup"
+  env           = var.env
+  subnets       = flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
+  for_each      = var.apps
+  name          = each.key
+  instance_type = each.value.instance_type
+  min_size      = each.value.min_size
+  max_size      = each.value.max_size
+}
