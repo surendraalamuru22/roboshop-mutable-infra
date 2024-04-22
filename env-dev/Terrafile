@@ -20,5 +20,5 @@ rabbitmq:
   version: "main"
 
 app-setup:
-  source: "https://github.com/raghudevopsb67/tf-module-mutable-app-setup"
+  source: "https://github.com/surendraalamuru22/tf-module-mutable-app-setup"
   version: "main"
