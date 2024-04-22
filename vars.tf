@@ -4,3 +4,4 @@ variable "management_vpc" {}
 variable "rds" {}
 variable "docdb" {}
 variable "elasticache" {}
+variable "rabbitmq" {}
