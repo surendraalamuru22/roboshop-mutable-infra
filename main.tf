@@ -21,14 +21,14 @@ module "docdb" {
   subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
 }
 
-#module "rds" {
-#  for_each = var.rds
-#  source = "./vendor/modules/rds"
-#  name = each.key
-#  env = var.env
-#  engine              = each.value.engine
-#  engine_version      = each.value.engine_version
-#  instance_class      = each.value.instance_class
-#  skip_final_snapshot = each.value.skip_final_snapshot
-#  subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
-#}
+module "rds" {
+  for_each = var.rds
+  source = "./vendor/modules/rds"
+  name = each.key
+  env = var.env
+  engine              = each.value.engine
+  engine_version      = each.value.engine_version
+  instance_class      = each.value.instance_class
+  skip_final_snapshot = each.value.skip_final_snapshot
+  subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+}
