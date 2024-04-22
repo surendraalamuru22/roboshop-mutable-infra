@@ -12,16 +12,18 @@ module "vpc" {
 }
 
 
-#module "docdb" {
-#  source = "./vendor/modules/docdb"
-#  docdb = var.docdb
-#  env = var.env
-#  subnets = local.database_private_subnets[*].id
-#}
-#
+module "docdb" {
+  source = "./vendor/modules/docdb"
+  docdb = var.docdb
+  engine = each.value.engine
+  name = each.key
+  env = var.env
+  subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+}
+
 #module "rds" {
 #  source = "./vendor/modules/rds"
 #  rds = var.rds
 #  env = var.env
-#  subnets = local.database_private_subnets[*].id
+#  subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
 #}
