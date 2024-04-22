@@ -32,3 +32,15 @@ module "rds" {
   skip_final_snapshot = each.value.skip_final_snapshot
   subnets = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
 }
+
+module "elasticache" {
+  for_each = var.elasticache
+  source = "./vendor/modules/elasticache"
+  engine          = each.value.engine
+  engine_version  = each.value.engine_version
+  node_type       = each.value.node_type
+  num_cache_nodes = each.value.num_cache_nodes
+  name = each.key
+  env = var.env
+  subnets         = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+}

@@ -54,3 +54,12 @@ rds = {
     skip_final_snapshot = true
   }
 }
+
+elasticache = {
+  ec1 = {
+    engine          = "redis"
+    engine_version  = "6.2"
+    node_type       = "cache.t3.micro"
+    num_cache_nodes = 1
+  }
+}

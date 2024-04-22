@@ -9,3 +9,7 @@ docdb:
 rds:
   source:  "https://github.com/surendraalamuru22/tf-module-rds"
   version: "main"
+
+elasticache:
+  source:  "https://github.com/surendraalamuru22/tf-module-elasticache"
+  version: "main"
