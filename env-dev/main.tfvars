@@ -80,3 +80,5 @@ apps = {
 #    type                 = "backend"
   }
 }
+
+BASTION_NODE = "172.31.23.91/32"
