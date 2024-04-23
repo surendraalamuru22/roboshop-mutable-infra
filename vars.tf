@@ -8,3 +8,4 @@ variable "rabbitmq" {}
 variable "apps" {}
 variable "BASTION_NODE" {}
 variable "private_zone_id" {}
+variable "PROMETHEUS_NODE" {}

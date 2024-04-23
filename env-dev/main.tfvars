@@ -75,7 +75,7 @@ apps = {
     instance_type        = "t3.micro"
     max_size             = 1
     min_size             = 1
-#    app_port_no          = 8080
+    app_port_no          = 8080
 #    lb_listener_priority = 100
 #    type                 = "backend"
   }
@@ -83,3 +83,4 @@ apps = {
 
 BASTION_NODE = "172.31.23.91/32"
 private_zone_id = "Z09760163FZL2J7JTGOE9"
+PROMETHEUS_NODE = "172.31.17.226/32"
