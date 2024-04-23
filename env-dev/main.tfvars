@@ -79,6 +79,36 @@ apps = {
 #    lb_listener_priority = 100
 #    type                 = "backend"
   }
+  user = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+    app_port_no   = 8080
+  }
+  shipping = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+    app_port_no   = 8080
+  }
+  payment = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+    app_port_no   = 8080
+  }
+  catalogue = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+    app_port_no   = 8080
+  }
+  frontend = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+    app_port_no   = 80
+  }
 }
 
 BASTION_NODE = "172.31.23.91/32"
