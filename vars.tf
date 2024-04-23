@@ -7,3 +7,4 @@ variable "elasticache" {}
 variable "rabbitmq" {}
 variable "apps" {}
 variable "BASTION_NODE" {}
+variable "private_zone_id" {}

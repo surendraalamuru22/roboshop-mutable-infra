@@ -65,4 +65,5 @@ module "apps" {
   max_size      = each.value.max_size
   BASTION_NODE = var.BASTION_NODE
   vpc_id               = element([for i, j in module.vpc : j.vpc_id], 0)
+  private_zone_id = var.private_zone_id
 }
