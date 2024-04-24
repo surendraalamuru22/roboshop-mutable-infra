@@ -68,6 +68,8 @@ module "apps" {
   app_port_no = each.value.app_port_no
   PROMETHEUS_NODE = var.PROMETHEUS_NODE
   vpc_cidr             = element([for i, j in module.vpc : j.vpc_cidr], 0)
+  alb                  = module.alb
+  private_zone_id      = var.private_zone_id
 }
 
 module "alb" {
