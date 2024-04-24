@@ -70,6 +70,8 @@ module "apps" {
   vpc_cidr             = element([for i, j in module.vpc : j.vpc_cidr], 0)
   alb                  = module.alb
   private_zone_id      = var.private_zone_id
+  lb_listener_priority = each.value.lb_listener_priority
+  type                 = each.value.type
 }
 
 module "alb" {
